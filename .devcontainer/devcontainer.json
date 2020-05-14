@@ -1,0 +1,11 @@
+{
+    "name": "java-selenium",
+    "workspaceFolder": "/workspace",
+    "dockerComposeFile": "docker-compose.yml",
+    "service": "dev",
+	"shutdownAction": "stopCompose",
+	"extensions": [
+		"redhat.java",
+		"vscjava.vscode-java-dependency"
+	],
+}
