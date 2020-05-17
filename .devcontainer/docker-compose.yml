@@ -6,4 +6,15 @@ services:
         volumes: 
             - ../:/workspace
             - .m2:/root/.m2
+            - ./extensions/:/root/.vscode-server/extensions/
         tty: true
+        depends_on:
+            - web
+    web:
+        image: devcontainer:node
+        container_name: sample-web
+        volumes: 
+            - ../src/test/resources/sampleweb:/app
+        entrypoint: serve /app -l 3000
+        ports: 
+            - "3000:3000"
